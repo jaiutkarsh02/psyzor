@@ -20,8 +20,9 @@ export default class Login extends Component {
     render() {
         const styles = StyleSheet.create({
             scroll: {
-              backgroundColor: '#E1D7D8',
+              backgroundColor: 'black',
               padding: 30,
+              paddingTop:94,
               flexDirection: 'column'
           },
           label: {
@@ -29,7 +30,7 @@ export default class Login extends Component {
               fontSize: 20
           },
           alignRight: {
-              alignSelf: 'flex-end'
+              alignSelf: 'flex-start'
           },
           textInput: {
             height: 50,
@@ -60,23 +61,25 @@ export default class Login extends Component {
             fontSize: 20,
             color: '#595856'
         },
+        buttonOrangeText: {
+            fontSize: 34,
+            fontFamily:'Lucida Calligraphy',
+            color: '#FF6600'
+        },
         primaryButton: {
-            backgroundColor: '#34A853'
+            backgroundColor: '#FF6600'
         },
         footer: {
-           marginTop: 100
+           marginTop: 35
         }
         });
       return (
           <ScrollView style={styles.scroll}>
+
 <Container>
-    <Button 
-        label="Forgot Login/Pass"
-        styles={{button: styles.alignRight, label: styles.label}} 
-        onPress={this.press.bind(this)} />
-</Container>
-<Container>
-    <Label text='Psyzor Factory'/>
+<View>
+            <Text style={[styles.buttonOrangeText]}>Psyzor Factory </Text> 
+        </View>
 </Container>
 <Container>
     <Label  text="Username or Email" />
@@ -93,6 +96,12 @@ export default class Login extends Component {
 </Container>
 <Container>
     <Button 
+        label="Forgot Password?"
+        styles={{button: styles.alignRight, label: styles.label}} 
+        onPress={this.press.bind(this)} />
+</Container>
+{/* <Container>
+    <Button 
         styles={{button: styles.transparentButton}}
         onPress={this.press.bind(this)}
     >
@@ -102,21 +111,28 @@ export default class Login extends Component {
             <Text style={styles.buttonBlueText}>with Facebook</Text>
         </View>
     </Button>
-</Container>
+</Container> */}
 <View style={styles.footer}>
     <Container>
         <Button 
-            label="Sign In"
+            label="Login"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
-    <Container>
+    {/* <Container>
         <Button 
             label="CANCEL"
             styles={{label: styles.buttonBlackText}} 
             onPress={this.press.bind(this)} />
-    </Container>
+    </Container> */}
 </View>
+<Container>
+    <Label text="Don't have an account?"/>
+    <Button 
+        label="Signup"
+        styles={{button: styles.alignRight, label: styles.label}} 
+        onPress={this.press.bind(this)} />
+</Container>
           </ScrollView>
           
       );
