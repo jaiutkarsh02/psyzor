@@ -14,8 +14,22 @@ import Button from '../Components/Button';
 import Label from '../Components/Label';
 
 export default class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            username:null,
+        password:null};
+        //this.handleInputChange = this.handleInputChange.bind(this);
+      }
+    //   handleInputChange(event = {}) {
+    //     const name = event.target && event.target.name;
+    //     const value = event.target && event.target.value;
+    //     this.setState({[name]: value});
+    //   }
     press() {
-        alert('login pressed')
+        if(this.state.username=='nidhi'&& this.state.password=='test@123'){
+            alert("login pressed")
+        }
       }
     render() {
         const styles = StyleSheet.create({
@@ -82,16 +96,20 @@ export default class Login extends Component {
         </View>
 </Container>
 <Container>
-    <Label  text="Username or Email" />
     <TextInput
         style={styles.textInput}
+        placeholder="UserName"
+        onChangeText={(value) => this.setState({username: value})}
+        value={this.state.username}
     />
 </Container>
 <Container>
-    <Label text="Password" />
     <TextInput
         secureTextEntry={true}
         style={styles.textInput}
+        placeholder="Password"
+        onChangeText={(value) => this.setState({password: value})}
+        value={this.state.password}
     />
 </Container>
 <Container>
