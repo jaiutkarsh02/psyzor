@@ -5,12 +5,13 @@ import {
  
 import Login from './Components/Login';
 import Signup from './Components/Signup';
+import ForgotPassword from './Components/ForgotPassword';
  
 export default class ReactNativeCommonScreens extends Component {
  
   render() {
     return (
-      <Signup />
+      <ForgotPassword />
 
     );
   }
