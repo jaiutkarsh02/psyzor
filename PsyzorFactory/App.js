@@ -4,12 +4,14 @@ import {
 } from 'react-native';
  
 import Login from './Components/Login';
+import Signup from './Components/Signup';
  
 export default class ReactNativeCommonScreens extends Component {
  
   render() {
     return (
-      <Login />
+      <Signup />
+
     );
   }
  
