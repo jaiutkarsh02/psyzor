@@ -17,10 +17,6 @@ import Footer from '../Components/Footer';
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        this.state={
-        password:null,
-        confirm_password:null,
-    email:null};
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
     //   handleInputChange(event = {}) {
@@ -34,10 +30,10 @@ export default class Login extends Component {
     render() {
         const styles = StyleSheet.create({
             scroll: {
-              backgroundColor: 'black'
+              backgroundColor: 'black',
             //   padding: 30,
             //   paddingTop:94,
-              //flexDirection: 'column'
+            flexDirection: 'column',
           },
           label: {
               color: '#0d8898',
@@ -81,75 +77,33 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#FF6600',
+            right:0,
+            top:-55,
+            alignSelf: 'flex-end',
+            marginRight:0
         },
         footer: {
-           marginTop: 35
+            alignSelf: 'flex-end'
+
         }
         });
       return (
        
    
           <ScrollView style={styles.scroll}>
+          <Header >
+              <Container>
+                  <Label text="Notifications"/>
+              </Container>
+          </Header>
+
+<Footer >
 <Container>
-    <TextInput
-        style={styles.textInput}
-        placeholder="Email"
-        onChangeText={(value) => this.setState({username: value})}
-        value={this.state.username}
-    />
-</Container>
-<Container>
-    <TextInput
-        secureTextEntry={true}
-        style={styles.textInput}
-        placeholder="New Password"
-        onChangeText={(value) => this.setState({password: value})}
-        value={this.state.password}
-    />
-</Container>
-<Container>
-    <TextInput
-        secureTextEntry={true}
-        style={styles.textInput}
-        placeholder="Confirm Password"
-        onChangeText={(value) => this.setState({confirm_password: value})}
-        value={this.state.confirm_password}
-    />
-</Container>
-{/* <Container>
-    <Button 
-        styles={{button: styles.transparentButton}}
-        onPress={this.press.bind(this)}
-    >
-        <View style={styles.inline}>
-            <Icon name="facebook-official" size={30} color="#3B5699" />
-            <Text style={[styles.buttonBlueText, styles.buttonBigText]}>  Connect </Text> 
-            <Text style={styles.buttonBlueText}>with Facebook</Text>
-        </View>
-    </Button>
-</Container> */}
-<View style={styles.footer}>
-    <Container>
-        <Button 
-            label="Done"
-            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
-            onPress={this.press.bind(this)} />
-    </Container>
-    {/* <Container>
-        <Button 
-            label="CANCEL"
-            styles={{label: styles.buttonBlackText}} 
-            onPress={this.press.bind(this)} />
-    </Container> */}
-</View>
-<Container>
-    
-    <Button 
-        label="Back to Login?"
-        styles={{button: styles.alignRight, label: styles.label}} 
-        onPress={this.press.bind(this)} />
-</Container>
+                  <Label text="Discover"/>
+                  <Label style={styles.footer} text="Browse"/>
+              </Container>
+</Footer>
 
           </ScrollView>
           

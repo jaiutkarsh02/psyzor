@@ -18,9 +18,9 @@ export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state={
-        password:null,
-        confirm_password:null,
-    email:null};
+        title:null,
+        go_live_notification:null,
+    category:null};
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
     //   handleInputChange(event = {}) {
@@ -49,7 +49,7 @@ export default class Login extends Component {
           textInput: {
             height: 50,
             fontSize: 30,
-            backgroundColor: '#FFF'
+            backgroundColor: 'brown'
         },
         transparentButton: {
             marginTop: 30,
@@ -91,69 +91,55 @@ export default class Login extends Component {
        
    
           <ScrollView style={styles.scroll}>
+          <Header>
+              <Label text="Manage Stream" />
+          </Header>
+          <Label text="Broadcast Info" />
 <Container>
+    <Label text="Title" />
     <TextInput
         style={styles.textInput}
-        placeholder="Email"
-        onChangeText={(value) => this.setState({username: value})}
-        value={this.state.username}
+        onChangeText={(value) => this.setState({title: value})}
+        value={this.state.title}
     />
 </Container>
 <Container>
+    <Label text="Go Live Notification" />
     <TextInput
-        secureTextEntry={true}
         style={styles.textInput}
-        placeholder="New Password"
-        onChangeText={(value) => this.setState({password: value})}
-        value={this.state.password}
+        onChangeText={(value) => this.setState({go_live_notification: value})}
+        value={this.state.go_live_notification}
     />
 </Container>
 <Container>
+<Label text="Category" />
     <TextInput
-        secureTextEntry={true}
         style={styles.textInput}
-        placeholder="Confirm Password"
-        onChangeText={(value) => this.setState({confirm_password: value})}
-        value={this.state.confirm_password}
+        onChangeText={(value) => this.setState({category: value})}
+        value={this.state.category}
     />
 </Container>
-{/* <Container>
-    <Button 
-        styles={{button: styles.transparentButton}}
-        onPress={this.press.bind(this)}
-    >
-        <View style={styles.inline}>
-            <Icon name="facebook-official" size={30} color="#3B5699" />
-            <Text style={[styles.buttonBlueText, styles.buttonBigText]}>  Connect </Text> 
-            <Text style={styles.buttonBlueText}>with Facebook</Text>
-        </View>
-    </Button>
-</Container> */}
+
 <View style={styles.footer}>
     <Container>
         <Button 
-            label="Done"
+            label="Save"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
-    {/* <Container>
-        <Button 
-            label="CANCEL"
-            styles={{label: styles.buttonBlackText}} 
-            onPress={this.press.bind(this)} />
-    </Container> */}
 </View>
-<Container>
-    
-    <Button 
-        label="Back to Login?"
-        styles={{button: styles.alignRight, label: styles.label}} 
-        onPress={this.press.bind(this)} />
-</Container>
+<View style={styles.footer}>
+    <Container>
+        <Button 
+            label="Share link to channel"
+            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
+            onPress={this.press.bind(this)} />
+    </Container>
+</View>
 
           </ScrollView>
           
       );
     }
-  }
+    }
 
