@@ -12,13 +12,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Container from '../Components/Container';
 import Button from '../Components/Button';
 import Label from '../Components/Label';
-
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            username:null,
-        password:null};
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
     //   handleInputChange(event = {}) {
@@ -27,17 +25,15 @@ export default class Login extends Component {
     //     this.setState({[name]: value});
     //   }
     press() {
-        if(this.state.username=='nidhi'&& this.state.password=='test@123'){
-            alert("login pressed")
-        }
+        alert('Password Reset')
       }
     render() {
         const styles = StyleSheet.create({
             scroll: {
               backgroundColor: 'black',
-              padding: 30,
-              paddingTop:94,
-              flexDirection: 'column'
+            //   padding: 30,
+            //   paddingTop:94,
+            flexDirection: 'column'
           },
           label: {
               color: '#0d8898',
@@ -70,6 +66,7 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+            alignSelf:'flex-start'
         },
         buttonBlackText: {
             fontSize: 20,
@@ -81,76 +78,64 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#FF6600',
+            right:0,
+            top:-55,
+            alignSelf: 'flex-end',
+            marginRight:0
+        },
+        primaryButton1: {
+            backgroundColor: '#FF6600',
+            height:50
         },
         footer: {
-           marginTop: 35
+        marginRight:10,
+        marginLeft:10,
+          borderColor:"white",
+            borderWidth:1,
+            height:52
         }
         });
       return (
+       
+   
           <ScrollView style={styles.scroll}>
-
-<Container>
-<View>
-            <Text style={[styles.buttonOrangeText]}>Psyzor TV </Text> 
-        </View>
-</Container>
-<Container>
-    <TextInput
-        style={styles.textInput}
-        placeholder="UserName"
-        onChangeText={(value) => this.setState({username: value})}
-        value={this.state.username}
-    />
-</Container>
-<Container>
-    <TextInput
-        secureTextEntry={true}
-        style={styles.textInput}
-        placeholder="Password"
-        onChangeText={(value) => this.setState({password: value})}
-        value={this.state.password}
-    />
-</Container>
-<Container>
-    <Button 
-        label="Forgot Password?"
-        styles={{button: styles.alignRight, label: styles.label}} 
-        onPress={this.press.bind(this)} />
-</Container>
-{/* <Container>
-    <Button 
-        styles={{button: styles.transparentButton}}
-        onPress={this.press.bind(this)}
-    >
-        <View style={styles.inline}>
-            <Icon name="facebook-official" size={30} color="#3B5699" />
-            <Text style={[styles.buttonBlueText, styles.buttonBigText]}>  Connect </Text> 
-            <Text style={styles.buttonBlueText}>with Facebook</Text>
-        </View>
-    </Button>
-</Container> */}
+          <Header>
+              <Container>
+                  <Label text="Presence"/>
+                  <Button 
+            label="Done"
+            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
+            onPress={this.press.bind(this)} />
+              </Container>
+          </Header>
+          <View style={styles.footer}>
+    <Container>
+        <Button 
+            label="Online"
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            onPress={this.press.bind(this)} />
+    </Container>
+</View>
 <View style={styles.footer}>
     <Container>
         <Button 
-            label="Login"
-            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
+            label="Busy"
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
-    {/* <Container>
-        <Button 
-            label="CANCEL"
-            styles={{label: styles.buttonBlackText}} 
-            onPress={this.press.bind(this)} />
-    </Container> */}
 </View>
-<Container>
-    <Label text="Don't have an account?"/>
-    <Button 
-        label="Signup"
-        styles={{button: styles.alignRight, label: styles.label}} 
-        onPress={this.press.bind(this)} />
-</Container>
+<View style={styles.footer}>
+    <Container>
+        <Button 
+            label="Invisible"
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            onPress={this.press.bind(this)} />
+            
+    </Container>
+</View>
+
+
           </ScrollView>
           
       );
