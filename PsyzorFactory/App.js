@@ -12,11 +12,12 @@ import ManageScreen from './Components/ManageScreen';
 import MySubscription from './Components/MySubscription';
 import Presence from './Components/Presence';
 import Recommendations from './Components/Recommendations';
+import Enable from './Components/Enable';
 export default class ReactNativeCommonScreens extends Component {
  
   render() {
     return (
-      <Recommendations />
+      <Enable />
 
     );
   }
