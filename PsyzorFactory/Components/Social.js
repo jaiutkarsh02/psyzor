@@ -17,10 +17,6 @@ import Footer from '../Components/Footer';
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        this.state={
-        title:null,
-        go_live_notification:null,
-    category:null};
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
     //   handleInputChange(event = {}) {
@@ -34,10 +30,10 @@ export default class Login extends Component {
     render() {
         const styles = StyleSheet.create({
             scroll: {
-              backgroundColor: 'black'
+              backgroundColor: 'black',
             //   padding: 30,
             //   paddingTop:94,
-              //flexDirection: 'column'
+            flexDirection: 'column'
           },
           label: {
               color: '#0d8898',
@@ -49,7 +45,7 @@ export default class Login extends Component {
           textInput: {
             height: 50,
             fontSize: 30,
-            backgroundColor: 'brown'
+            backgroundColor: '#FFF'
         },
         transparentButton: {
             marginTop: 30,
@@ -70,6 +66,7 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+            alignSelf:'flex-start'
         },
         buttonBlackText: {
             fontSize: 20,
@@ -81,65 +78,56 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#FF6600',
+            right:0,
+            top:-55,
+            alignSelf: 'flex-end',
+            marginRight:0
+        },
+        primaryButton1: {
+            backgroundColor: '#FF6600',
+            height:50
+        },
+        check:{
+           color: 'orange'
         },
         footer: {
-           marginTop: 35
+            marginTop:250,
+        marginRight:10,
+        marginLeft:10,
+          borderColor:"white",
+            borderWidth:1,
+            height:52
         }
         });
       return (
        
    
           <ScrollView style={styles.scroll}>
-          <Header>
-              <Label text="Manage Stream" />
+          <Header style={styles.check}>
+              <Container>
+                  <Label text="Social"/>
+              </Container>
           </Header>
-          <Label text="Broadcast Info" />
-<Container>
-    <Label text="Title" />
-    <TextInput
-        style={styles.textInput}
-        onChangeText={(value) => this.setState({title: value})}
-        value={this.state.title}
-    />
-</Container>
-<Container>
-    <Label text="Go Live Notification" />
-    <TextInput
-        style={styles.textInput}
-        onChangeText={(value) => this.setState({go_live_notification: value})}
-        value={this.state.go_live_notification}
-    />
-</Container>
-<Container>
-<Label text="Category" />
-    <TextInput
-        style={styles.textInput}
-        onChangeText={(value) => this.setState({category: value})}
-        value={this.state.category}
-    />
-</Container>
 
+<Container style={styles.check}>
+    <Label text="Friends"/>
+</Container>
 <View style={styles.footer}>
+
     <Container>
         <Button 
-            label="Save"
-            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
+            label="Add Friends"
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>
-<View style={styles.footer}>
-    <Container>
-        <Button 
-            label="Share link to channel"
-            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
-            onPress={this.press.bind(this)} />
-    </Container>
-</View>
+
+
 
           </ScrollView>
           
       );
     }
-    }
+  }
 

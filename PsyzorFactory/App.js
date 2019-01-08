@@ -8,16 +8,21 @@ import Signup from './Components/Signup';
 import ForgotPassword from './Components/ForgotPassword';
 import EditProfile from './Components/EditProfile';
 import Notifications from './Components/Notifications';
-import ManageScreen from './Components/ManageScreen';
+import ManageStream from './Components/ManageStream';
 import MySubscription from './Components/MySubscription';
 import Presence from './Components/Presence';
 import Recommendations from './Components/Recommendations';
 import Enable from './Components/Enable';
+import NotificationSettings from './Components/NotificationSettings';
+import Social from './Components/Social';
+import Streaming from './Components/Streaming';
+import Settings from './Components/Settings';
+import Account from './Components/Account';
 export default class ReactNativeCommonScreens extends Component {
  
   render() {
     return (
-      <Enable />
+      <Account />
 
     );
   }
