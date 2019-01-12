@@ -23,7 +23,7 @@ export default class ReactNativeCommonScreens extends Component {
  
   render() {
     return (
-      <Social/>
+      <Recommendations/>
 
     );
   }
