@@ -68,6 +68,11 @@ export default class Login extends Component {
             color: '#FFF',
             alignSelf:'flex-start'
         },
+        buttonWhiteText1: {
+            fontSize: 20,
+            color: '#FFF',
+            alignSelf:'center'
+        },
         buttonBlackText: {
             fontSize: 20,
             color: '#595856'
@@ -80,13 +85,22 @@ export default class Login extends Component {
         primaryButton: {
             backgroundColor: '#FF6600',
             right:0,
-            top:-55,
+            top:-45,
+            height:20,
             alignSelf: 'flex-end',
             marginRight:0
         },
         primaryButton1: {
             backgroundColor: '#FF6600',
-            height:50
+            height:50,
+            opacity:0.1
+        },
+        primaryButton2: {
+            backgroundColor: '#FF6600',
+            height:50,
+            opacity:0.1,
+           
+            
         },
         footer: {
         marginRight:10,
@@ -155,7 +169,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Log Out"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton2, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
             
     </Container>

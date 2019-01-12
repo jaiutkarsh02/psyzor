@@ -36,7 +36,7 @@ export default class Login extends Component {
             flexDirection: 'column'
           },
           label: {
-              color: '#0d8898',
+              color: '#fff',
               fontSize: 20
           },
           alignRight: {
@@ -66,7 +66,9 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
-            alignSelf:'flex-start'
+            opacity:0.9,
+            alignSelf:'flex-start',
+            
         },
         buttonBlackText: {
             fontSize: 20,
@@ -84,11 +86,15 @@ export default class Login extends Component {
             height:40,
             alignSelf: 'flex-end',
             marginRight:0
+            
         },
         primaryButton1: {
             backgroundColor: '#FF6600',
-            height:50
+            height:50,
+            opacity:0.1
         },
+
+        
         footer: {
         marginRight:10,
         marginLeft:10,
@@ -111,7 +117,10 @@ export default class Login extends Component {
           <ScrollView style={styles.scroll}>
           <Header>
               <Container>
-                  <Label text="Account"/>
+                
+                  <Label text="Account" styles={{label:styles.label1}}/>
+                
+                 
                   <Button 
             label="Done"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
@@ -140,9 +149,10 @@ export default class Login extends Component {
             label="Presence"
             styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
+            
             <Button 
             label="Online"
-            styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
             
     </Container>

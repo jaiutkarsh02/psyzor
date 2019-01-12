@@ -40,8 +40,9 @@ export default class Login extends Component {
               //flexDirection: 'column'
           },
           label: {
-              color: '#0d8898',
-              fontSize: 20
+              color: '#ff6600',
+              fontSize: 20,
+              opacity:0.1
           },
           alignRight: {
               alignSelf: 'flex-start'
@@ -49,7 +50,8 @@ export default class Login extends Component {
           textInput: {
             height: 50,
             fontSize: 30,
-            backgroundColor: 'brown'
+            backgroundColor: '#ff6600',
+            opacity:0.1
         },
         transparentButton: {
             marginTop: 30,

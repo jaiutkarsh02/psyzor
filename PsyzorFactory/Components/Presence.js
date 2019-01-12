@@ -80,13 +80,16 @@ export default class Login extends Component {
         primaryButton: {
             backgroundColor: '#FF6600',
             right:0,
-            top:-55,
+            top:-45,
+            height:20,
             alignSelf: 'flex-end',
             marginRight:0
+            
         },
         primaryButton1: {
             backgroundColor: '#FF6600',
-            height:50
+            height:50,
+            opacity:0.1
         },
         footer: {
         marginRight:10,

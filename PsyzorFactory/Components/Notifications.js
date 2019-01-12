@@ -84,7 +84,8 @@ export default class Login extends Component {
             marginRight:0
         },
         footer: {
-            alignSelf: 'flex-end'
+            alignSelf: 'flex-end',
+            marginLeft:80
 
         }
         });

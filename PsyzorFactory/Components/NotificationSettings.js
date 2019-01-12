@@ -79,14 +79,16 @@ export default class Login extends Component {
         },
         primaryButton: {
             backgroundColor: '#FF6600',
+            height:50,
             right:0,
-            top:-55,
+            top:-45,
             alignSelf: 'flex-end',
             marginRight:0
         },
         primaryButton1: {
             backgroundColor: '#FF6600',
-            height:50
+            opacity:0.1
+           // height:50
         },
         footer: {
         marginRight:10,
@@ -117,7 +119,9 @@ export default class Login extends Component {
 <View style={styles.footer}>
     <Container>
         <Button 
-            label="Send me in-app notifications"
+           
+           label="Send me in-app notifications"
+
             styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>

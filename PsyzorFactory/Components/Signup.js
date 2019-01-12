@@ -39,7 +39,7 @@ export default class Login extends Component {
               flexDirection: 'column'
           },
           label: {
-              color: '#0d8898',
+              color: '#ff6600',
               fontSize: 20
           },
           alignRight: {
@@ -47,17 +47,18 @@ export default class Login extends Component {
           },
           textInput: {
             height: 50,
-            fontSize: 30,
-            backgroundColor: '#FFF'
+            fontSize: 25,
+            backgroundColor:'#000',
+            opacity:0.1
         },
         transparentButton: {
             marginTop: 30,
-            borderColor: '#3B5699',
+            borderColor: '#ff6600',
             borderWidth: 2
         },
         buttonBlueText: {
             fontSize: 20,
-            color: '#3B5699'
+            color: '#ff6600'
         },
         buttonBigText: {
             fontSize: 20,
@@ -72,7 +73,7 @@ export default class Login extends Component {
         },
         buttonBlackText: {
             fontSize: 20,
-            color: '#595856'
+            color: '#fff'
         },
         buttonOrangeText: {
             fontSize: 34,
@@ -94,6 +95,7 @@ export default class Login extends Component {
     <TextInput
         style={styles.textInput}
         placeholder="UserName"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({username: value})}
         value={this.state.username}
     />
@@ -103,6 +105,7 @@ export default class Login extends Component {
         secureTextEntry={true}
         style={styles.textInput}
         placeholder="Password"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({password: value})}
         value={this.state.password}
     />
@@ -112,6 +115,7 @@ export default class Login extends Component {
         secureTextEntry={true}
         style={styles.textInput}
         placeholder="Email"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({email: value})}
         value={this.state.email}
     />

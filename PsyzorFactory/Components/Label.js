@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'Verdana',
         marginBottom: 10,
-        color: '#595856'
+        color: '#fff',
+        marginTop:5
     }
 });
  

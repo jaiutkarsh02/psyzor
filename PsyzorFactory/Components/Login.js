@@ -39,26 +39,64 @@ export default class Login extends Component {
               paddingTop:94,
               flexDirection: 'column'
           },
+          
           label: {
-              color: '#0d8898',
-              fontSize: 20
+              color: '#ff6600',
+              fontSize: 20,
+              textAlign:'left',
+            
+             
+              
+
+             
           },
+          label1: {
+            color: '#ff6600',
+            fontSize: 20,
+            textAlign:'right',
+            
+            
+           
+            
+
+           
+        },
+          //ForgotPassword Link
           alignRight: {
-              alignSelf: 'flex-start'
+              padding:0,
+              alignSelf: 'flex-start',
+             
           },
+          alignRight1: {
+            
+            marginLeft:250,
+           
+            top:-55,
+            right:0,
+            
+            alignSelf: 'flex-start',
+           
+        },
+
+          // Username and Password Input
           textInput: {
+              
+             
             height: 50,
-            fontSize: 30,
-            backgroundColor: '#FFF'
+            fontSize: 25,
+            
+            backgroundColor:'#000',
+            opacity:0.1
+            
         },
         transparentButton: {
             marginTop: 30,
-            borderColor: '#3B5699',
+            borderColor: '#ff6600',
             borderWidth: 2
         },
         buttonBlueText: {
             fontSize: 20,
-            color: '#3B5699'
+            color: '#ff6600'
         },
         buttonBigText: {
             fontSize: 20,
@@ -70,15 +108,21 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+            fontWeight:'bold'
         },
         buttonBlackText: {
             fontSize: 20,
             color: '#595856'
         },
+        //for Psyzor TV
         buttonOrangeText: {
             fontSize: 34,
-            fontFamily:'Lucida Calligraphy',
-            color: '#FF6600'
+            
+            color: '#FF6600',
+            fontFamily:'Lobster',
+           marginLeft:80,
+           
+           
         },
         primaryButton: {
             backgroundColor: '#FF6600'
@@ -99,6 +143,8 @@ export default class Login extends Component {
     <TextInput
         style={styles.textInput}
         placeholder="UserName"
+        placeholderTextColor="#fff"
+      
         onChangeText={(value) => this.setState({username: value})}
         value={this.state.username}
     />
@@ -108,6 +154,7 @@ export default class Login extends Component {
         secureTextEntry={true}
         style={styles.textInput}
         placeholder="Password"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({password: value})}
         value={this.state.password}
     />
@@ -148,7 +195,7 @@ export default class Login extends Component {
     <Label text="Don't have an account?"/>
     <Button 
         label="Signup"
-        styles={{button: styles.alignRight, label: styles.label}} 
+        styles={{button: styles.alignRight1, label: styles.label1}} 
         onPress={this.press.bind(this)} />
 </Container>
           </ScrollView>

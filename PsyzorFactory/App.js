@@ -18,11 +18,12 @@ import Social from './Components/Social';
 import Streaming from './Components/Streaming';
 import Settings from './Components/Settings';
 import Account from './Components/Account';
+ 
 export default class ReactNativeCommonScreens extends Component {
  
   render() {
     return (
-      <Account />
+      <Social/>
 
     );
   }
