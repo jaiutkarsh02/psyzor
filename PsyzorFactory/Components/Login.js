@@ -18,7 +18,10 @@ export default class Login extends Component {
         super(props);
         this.state={
             username:null,
-        password:null};
+        password:null
+        
+    };this.press=this.press.bind(this)
+
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
     //   handleInputChange(event = {}) {
@@ -27,9 +30,9 @@ export default class Login extends Component {
     //     this.setState({[name]: value});
     //   }
     press() {
-        if(this.state.username=='nidhi'&& this.state.password=='test@123'){
-            alert("login pressed")
-        }
+        
+            this.props.onLoginClick("login");
+        
       }
     render() {
         const styles = StyleSheet.create({

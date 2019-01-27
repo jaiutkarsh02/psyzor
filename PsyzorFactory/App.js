@@ -18,14 +18,33 @@ import Social from './Components/Social';
 import Streaming from './Components/Streaming';
 import Settings from './Components/Settings';
 import Account from './Components/Account';
- 
+import MainStream from './Components/MainStream';
 export default class ReactNativeCommonScreens extends Component {
- 
+  constructor(props){
+    super(props);
+    this.state={
+      login:null
+    }
+  }
+  onLoginClick(query){
+    if(query=="login"){
+this.setState({
+  login:true
+})
+    }
+  }
   render() {
+    if(this.state.login==true){
+      return(<MainStream/>)
+    }
+    else{
     return (
-      <Recommendations/>
+      
+      <Login
+      onLoginClick={this.onLoginClick.bind(this)}/>
 
     );
+    }
   }
  
 }
