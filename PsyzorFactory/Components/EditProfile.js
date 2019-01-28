@@ -47,8 +47,8 @@ export default class Login extends Component {
           textInput: {
             height: 50,
             fontSize: 30,
-            backgroundColor: '#ff6600',
-            opacity:0.1
+            backgroundColor: '#000',
+            opacity:0.5
         },
         transparentButton: {
             marginTop: 30,
@@ -66,6 +66,8 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+           
+            alignSelf:'flex-start',
         },
       
         buttonOrangeText: {
@@ -74,14 +76,18 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#ff6600',
+            backgroundColor:'#FF6600',
             right:0,
-            top:-55,
+            top:-60,
             alignSelf: 'flex-end',
-            marginRight:0
+            marginRight:0,
+            
         },
         footer: {
-           marginTop: 35
+           marginTop: 35,
+           borderColor:'#ff6600',
+           borderWidth:1,
+           marginTop:0
         }
         });
       return (
@@ -99,6 +105,7 @@ export default class Login extends Component {
           </Header>
 <Container>
     <Label text="Edit Bio"/>
+    <View style={styles.footer}>
     <TextInput
         style={styles.textInput}
         placeholder="Bio" 
@@ -106,6 +113,7 @@ export default class Login extends Component {
        onChangeText={(value) => this.setState({bio: value})}
        value={this.state.bio}
     />
+    </View>
 </Container>
 
 

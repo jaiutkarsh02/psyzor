@@ -50,7 +50,7 @@ export default class Login extends Component {
           textInput: {
             height: 50,
             fontSize: 30,
-            backgroundColor: '#ff6600',
+            backgroundColor: '#000',
             opacity:0.1
         },
         transparentButton: {
@@ -83,10 +83,13 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#ff6600'
         },
         footer: {
-           marginTop: 35
+            //marginTop: 35,
+            borderColor:'#ff6600',
+            borderWidth:1,
+            marginTop:0
         }
         });
       return (
@@ -99,45 +102,55 @@ export default class Login extends Component {
           <Label text="Broadcast Info" />
 <Container>
     <Label text="Title" />
+    <View style={styles.footer}>
     <TextInput
         style={styles.textInput}
         onChangeText={(value) => this.setState({title: value})}
         value={this.state.title}
     />
+    </View>
+
 </Container>
 <Container>
     <Label text="Go Live Notification" />
+    <View style={styles.footer}>
+
     <TextInput
         style={styles.textInput}
         onChangeText={(value) => this.setState({go_live_notification: value})}
         value={this.state.go_live_notification}
     />
+    </View>
+
 </Container>
 <Container>
 <Label text="Category" />
+<View style={styles.footer}>
+
     <TextInput
         style={styles.textInput}
         onChangeText={(value) => this.setState({category: value})}
         value={this.state.category}
     />
+    </View>
 </Container>
 
-<View style={styles.footer}>
+
     <Container>
         <Button 
             label="Save"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
-</View>
-<View style={styles.footer}>
+
+
     <Container>
         <Button 
             label="Share link to channel"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
-</View>
+
 
           </ScrollView>
           

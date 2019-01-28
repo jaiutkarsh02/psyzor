@@ -87,7 +87,7 @@ export default class Login extends Component {
         },
         primaryButton1: {
             backgroundColor: '#FF6600',
-            height:50,
+            height:60,
             opacity:0.1
         
         },

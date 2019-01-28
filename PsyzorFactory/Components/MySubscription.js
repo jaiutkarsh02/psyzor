@@ -66,7 +66,14 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
-            marginTop:10
+            marginTop:5,
+           
+        },
+        buttonWhiteText1: {
+            fontSize: 20,
+            color: '#FFF',
+            marginTop:5,
+            opacity:0.5
         },
         buttonBlackText: {
             fontSize: 20,
@@ -86,13 +93,13 @@ export default class Login extends Component {
             marginRight:0
         },
         primaryButton1: {
-            backgroundColor: '#FF6600',
+            backgroundColor: '#000',
             height:50,
-            opacity:0.1
+            opacity:0.5
         },
         footer: {
            marginTop: 35,
-          borderColor:"white",
+          borderColor:"#ff6600",
             borderWidth:1,
             height:52
         }
@@ -114,7 +121,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Browse Channel"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>

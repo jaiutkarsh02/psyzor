@@ -91,29 +91,29 @@ export default class Login extends Component {
             marginRight:0
         },
         primaryButton1: {
-            backgroundColor: '#FF6600',
+            backgroundColor: '#000',
             height:50,
-            opacity:0.1
+            opacity:0.5
         },
         primaryButton2: {
-            backgroundColor: '#FF6600',
+            backgroundColor: '#000',
+            
             height:50,
-            opacity:0.1,
+            opacity:0.3,
            
             
         },
         footer: {
-        marginRight:10,
-        marginLeft:10,
-          borderColor:"white",
+        
+          borderColor:"#ff6600",
             borderWidth:1,
             height:52
         },
         footer1: {
-            marginRight:10,
-            marginLeft:10,
+            marginRight:80,
+            marginLeft:80,
             marginTop:325,
-              borderColor:"white",
+              borderColor:"#ff6600",
                 borderWidth:1,
                 height:52
             }

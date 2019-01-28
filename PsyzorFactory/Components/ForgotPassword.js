@@ -34,9 +34,9 @@ export default class Login extends Component {
     render() {
         const styles = StyleSheet.create({
             scroll: {
-              backgroundColor: 'black'
+              backgroundColor: 'black',
             //   padding: 30,
-            //   paddingTop:94,
+               paddingTop:105,
               //flexDirection: 'column'
           },
           label: {
@@ -47,9 +47,12 @@ export default class Login extends Component {
               alignSelf: 'flex-start'
           },
           textInput: {
+              
             height: 50,
-            fontSize: 30,
-            backgroundColor: '#FFF'
+            fontSize: 25,
+            backgroundColor: '#000',
+            opacity:0.5
+           
         },
         transparentButton: {
             marginTop: 30,
@@ -69,6 +72,7 @@ export default class Login extends Component {
         },
         buttonWhiteText: {
             fontSize: 20,
+            fontWeight:'bold',
             color: '#FFF',
         },
         buttonBlackText: {
@@ -95,6 +99,7 @@ export default class Login extends Component {
     <TextInput
         style={styles.textInput}
         placeholder="Email"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({username: value})}
         value={this.state.username}
     />
@@ -104,6 +109,7 @@ export default class Login extends Component {
         secureTextEntry={true}
         style={styles.textInput}
         placeholder="New Password"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({password: value})}
         value={this.state.password}
     />
@@ -113,6 +119,7 @@ export default class Login extends Component {
         secureTextEntry={true}
         style={styles.textInput}
         placeholder="Confirm Password"
+        placeholderTextColor="#fff"
         onChangeText={(value) => this.setState({confirm_password: value})}
         value={this.state.confirm_password}
     />
