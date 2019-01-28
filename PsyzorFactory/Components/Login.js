@@ -18,16 +18,10 @@ export default class Login extends Component {
         super(props);
         this.state={
             username:null,
-<<<<<<< HEAD
-        password:null,
-    login:null};
-        this.press=this.press.bind(this)
-=======
         password:null
         
     };this.press=this.press.bind(this)
 
->>>>>>> ebab5eb8ff891074d24765f39cdcbac7048fef86
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
     //   handleInputChange(event = {}) {
@@ -36,16 +30,9 @@ export default class Login extends Component {
     //     this.setState({[name]: value});
     //   }
     press() {
-<<<<<<< HEAD
-        if(this.state.username=='nidhi'&& this.state.password=='test@123'){
-            this.props.onLoginClick("login");
-
-        }
-=======
         
             this.props.onLoginClick("login");
         
->>>>>>> ebab5eb8ff891074d24765f39cdcbac7048fef86
       }
     render() {
         const styles = StyleSheet.create({
