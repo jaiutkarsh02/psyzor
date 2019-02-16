@@ -81,7 +81,8 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#FF6600',
+            
         },
         footer: {
            marginTop: 35

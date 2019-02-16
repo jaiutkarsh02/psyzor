@@ -361,6 +361,7 @@ export default class MainStream extends Component {
           
     
           </Container>
+          
 </View>
       </Footer>
  

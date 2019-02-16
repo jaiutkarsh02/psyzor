@@ -7,7 +7,8 @@ import {
   TextInput,
   ScrollView
 } from 'react-native';
- 
+
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Container from '../Components/Container';
 import Button from '../Components/Button';
@@ -20,7 +21,8 @@ export default class Login extends Component {
             username:null,
         password:null
         
-    };this.press=this.press.bind(this)
+    };
+   // this.press=this.press.bind(this)
 
         //this.handleInputChange = this.handleInputChange.bind(this);
       }
@@ -38,8 +40,8 @@ export default class Login extends Component {
         const styles = StyleSheet.create({
             scroll: {
               backgroundColor: 'black',
-              padding: 30,
-              paddingTop:94,
+            //   padding: 30,
+            //   paddingTop:94,
               flexDirection: 'column'
           },
           
@@ -55,8 +57,10 @@ export default class Login extends Component {
           },
           label1: {
             color: '#ff6600',
-            fontSize: 20,
+           fontSize: 20,
             textAlign:'right',
+           
+
             
             
            
@@ -64,20 +68,35 @@ export default class Login extends Component {
 
            
         },
+        "buttonOrangeText": {
+           marginTop:70,
+           marginBottom:40,
+            fontSize: 30,
+            
+            
+            color: '#FF6600',
+            fontFamily:'Pacificio-Regular',
+
+          marginLeft:110,
+           
+           
+        },
+  
           //ForgotPassword Link
           alignRight: {
               padding:0,
-              alignSelf: 'flex-start',
+             alignSelf: 'flex-start',
+              marginLeft:30,
+              marginTop:30
              
+
           },
           alignRight1: {
-            
-            marginLeft:250,
+              
+        
+           marginTop:-20,
+           marginLeft:-90,
            
-            top:-55,
-            right:0,
-            
-            alignSelf: 'flex-start',
            
         },
 
@@ -85,49 +104,53 @@ export default class Login extends Component {
           textInput: {
               
              
-            height: 50,
-            fontSize: 25,
+           // height: 50,
+            fontSize: 20,
             
             backgroundColor:'#000',
-            opacity:0.5
+            opacity:0.5,
+            borderColor:'#ff6600',
+            borderBottomWidth:1,marginLeft:30,
+            marginRight:30
             
         },
+        textInput1:{
+
+         color:"#fff",
+         
+         marginLeft:30,
+         marginRight:150,
+         fontSize:20
+
+        },
         transparentButton: {
-            marginTop: 30,
+           // marginTop: 30,
             borderColor: '#ff6600',
             borderWidth: 2
         },
         buttonBlueText: {
             color: '#ff6600'
         },
-        buttonBigText: {
-            fontSize: 20,
-            fontWeight: 'bold'
-        },
+       
         inline: {
             flexDirection: 'row'
         },
         buttonWhiteText: {
-            fontSize: 20,
+         fontSize: 20,
             color: '#FFF',
             fontWeight:'bold'
         },
         buttonBlackText: {
-            fontSize: 20,
+          //  fontSize: 20,
             color: '#595856'
         },
         //for Psyzor TV
-        buttonOrangeText: {
-            fontSize: 34,
-            
-            color: '#FF6600',
-            fontFamily:'Pacificio-Regular',
-           marginLeft:80,
-           
-           
-        },
+        
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#FF6600',
+            marginLeft:30,
+            marginRight:30
+            
         },
         footer: {
            marginTop: 35
@@ -139,7 +162,8 @@ export default class Login extends Component {
 <Container>
 <View>
             <Text style={[styles.buttonOrangeText]}>Psyzor TV </Text> 
-        </View>
+            </View>
+       
 </Container>
 <Container>
     <TextInput
@@ -186,23 +210,23 @@ export default class Login extends Component {
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
     </Container>
-    {/* <Container>
-        <Button 
-            label="CANCEL"
-            styles={{label: styles.buttonBlackText}} 
-            onPress={this.press.bind(this)} />
-    </Container> */}
+   
 </View>
-<Container>
-    <Label text="Don't have an account?"/>
+<View flexDirection="row">
+<View>
+            <Text style={[styles.textInput1]}>Don't have an account? </Text> 
+            </View>
     <Button 
         label="Signup"
+        
         styles={{button: styles.alignRight1, label: styles.label1}} 
         onPress={this.press.bind(this)} />
-</Container>
+      
+</View>
           </ScrollView>
           
       );
     }
   }
+
 
