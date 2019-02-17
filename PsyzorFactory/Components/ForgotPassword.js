@@ -40,18 +40,24 @@ export default class Login extends Component {
               //flexDirection: 'column'
           },
           label: {
-              color: '#0d8898',
+              color: '#ff6600',
               fontSize: 20
           },
           alignRight: {
-              alignSelf: 'flex-start'
+            padding:0,
+            alignSelf: 'flex-start',
+             marginLeft:30,
+             marginTop:-5
           },
           textInput: {
               
-            height: 50,
-            fontSize: 25,
-            backgroundColor: '#000',
-            opacity:0.5
+            fontSize: 20,
+            
+            backgroundColor:'#000',
+            opacity:0.5,
+            borderColor:'#ff6600',
+            borderBottomWidth:1,marginLeft:30,
+            marginRight:30
            
         },
         transparentButton: {
@@ -85,7 +91,10 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600'
+            backgroundColor: '#FF6600',
+            marginLeft:30,
+            marginRight:30,
+            marginTop:-10
         },
         footer: {
            marginTop: 35

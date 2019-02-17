@@ -40,35 +40,20 @@ export default class Login extends Component {
         const styles = StyleSheet.create({
             scroll: {
               backgroundColor: 'black',
-            //   padding: 30,
-            //   paddingTop:94,
-              flexDirection: 'column'
+               flexDirection: 'column'
           },
           
           label: {
               color: '#ff6600',
               fontSize: 20,
-              textAlign:'left',
-            
-             
-              
-
-             
+              textAlign:'left',   
           },
           label1: {
             color: '#ff6600',
            fontSize: 20,
             textAlign:'right',
-           
-
-            
-            
-           
-            
-
-           
-        },
-        "buttonOrangeText": {
+         },
+        buttonOrangeText: {
            marginTop:70,
            marginBottom:40,
             fontSize: 30,
@@ -92,10 +77,8 @@ export default class Login extends Component {
 
           },
           alignRight1: {
-              
-        
-           marginTop:-20,
-           marginLeft:-90,
+          marginTop:-20,
+          marginLeft:-90,
            
            
         },
@@ -115,25 +98,44 @@ export default class Login extends Component {
             
         },
         textInput1:{
-
-         color:"#fff",
-         
-         marginLeft:30,
-         marginRight:150,
-         fontSize:20
+            color:"#fff",
+            marginLeft:30,
+            marginRight:150,
+            fontSize:20
 
         },
         transparentButton: {
-           // marginTop: 30,
+            flexDirection:'row',
             borderColor: '#ff6600',
-            borderWidth: 2
+            borderWidth:2,
+            marginLeft:120,
+            marginRight:120
+            
+        },
+        transparentButton1: {
+            flexDirection:'row',
+            borderColor: '#fff',
+            borderWidth:2,
+            marginLeft:170,
+            marginRight:120
+            
         },
         buttonBlueText: {
-            color: '#ff6600'
+            color: '#fff',
+            fontSize:20,
+            borderWidth:2,
+            borderColor:'#ff6600'
         },
-       
+        buttonBlueText1: {
+            color: '#fff',
+            fontSize:20,
+            borderWidth:2,
+            borderColor:'#ff6600',
+           
+        },
         inline: {
-            flexDirection: 'row'
+            flexDirection: 'row',
+            
         },
         buttonWhiteText: {
          fontSize: 20,
@@ -149,7 +151,8 @@ export default class Login extends Component {
         primaryButton: {
             backgroundColor: '#FF6600',
             marginLeft:30,
-            marginRight:30
+            marginRight:30,
+            marginTop:-40
             
         },
         footer: {
@@ -191,18 +194,33 @@ export default class Login extends Component {
         styles={{button: styles.alignRight, label: styles.label}} 
         onPress={this.press.bind(this)} />
 </Container>
-{/* <Container>
+
+<View flexDirection="row">
     <Button 
-        styles={{button: styles.transparentButton}}
+        styles={{button: styles.transparentButton1
+        
+        }}
         onPress={this.press.bind(this)}
     >
         <View style={styles.inline}>
             <Icon name="facebook-official" size={30} color="#3B5699" />
-            <Text style={[styles.buttonBlueText, styles.buttonBigText]}>  Connect </Text> 
-            <Text style={styles.buttonBlueText}>with Facebook</Text>
+            <Text style={[styles.buttonBlueText1]}>Facebook</Text> 
+            
         </View>
+        
     </Button>
-</Container> */}
+    <Button 
+        styles={{button: styles.transparentButton1}}
+        onPress={this.press.bind(this)}
+    >
+        <View style={styles.inline}>
+            <Icon name="facebook-official" size={30} color="#3B5699" />
+            <Text style={[styles.buttonBlueText1]}> Facebook</Text> 
+            
+        </View>
+
+    </Button>
+    </View>
 <View style={styles.footer}>
     <Container>
         <Button 

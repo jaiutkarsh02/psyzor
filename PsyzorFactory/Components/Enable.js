@@ -66,7 +66,8 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
-            alignSelf:'flex-start'
+            alignSelf:'flex-start',
+            fontWeight:'bold'
         },
         buttonBlackText: {
             fontSize: 20,

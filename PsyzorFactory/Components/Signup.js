@@ -43,13 +43,19 @@ export default class Login extends Component {
               fontSize: 20
           },
           alignRight: {
-              alignSelf: 'flex-start'
+            padding:0,
+            alignSelf: 'flex-start',
+             marginLeft:30,
+             marginTop:-5
           },
           textInput: {
-            height: 50,
-            fontSize: 25,
+            fontSize: 20,
+            
             backgroundColor:'#000',
-            opacity:0.1
+            opacity:0.5,
+            borderColor:'#ff6600',
+            borderBottomWidth:1,marginLeft:30,
+            marginRight:30
         },
         transparentButton: {
             marginTop: 30,
@@ -70,6 +76,7 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+            fontWeight:'bold'
         },
         buttonBlackText: {
             fontSize: 20,
@@ -82,6 +89,10 @@ export default class Login extends Component {
         },
         primaryButton: {
             backgroundColor: '#FF6600',
+            marginLeft:30,
+            marginRight:30,
+            marginTop:-10
+            
             
         },
         footer: {

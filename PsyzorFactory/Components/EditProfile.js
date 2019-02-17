@@ -8,6 +8,7 @@ import {
   ScrollView
 } from 'react-native';
  
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Container from '../Components/Container';
 import Button from '../Components/Button';
@@ -46,7 +47,7 @@ export default class Login extends Component {
           },
           textInput: {
             height: 50,
-            fontSize: 30,
+            fontSize: 20,
             backgroundColor: '#000',
             opacity:0.5
         },
@@ -66,8 +67,11 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+            top:12,
+            fontWeight:"bold"
+
            
-            alignSelf:'flex-start',
+            
         },
       
         buttonOrangeText: {
@@ -78,10 +82,21 @@ export default class Login extends Component {
         primaryButton: {
             backgroundColor:'#FF6600',
             right:0,
-            top:-60,
+            top:-50,
             alignSelf: 'flex-end',
             marginRight:0,
             
+            
+        },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+          
         },
         footer: {
            marginTop: 35,
@@ -95,10 +110,12 @@ export default class Login extends Component {
    
           <ScrollView style={styles.scroll}>
           <Header>
-              <Container>
-                  <Label text="Edit Profile"/>
+              <Container flexDirection="row">
+                 <View>
+            <Text style={[styles.buttonText]}>EditProfile</Text> 
+            </View>
                   <Button 
-            label="save"
+            label="Save"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
             onPress={this.press.bind(this)} />
               </Container>
