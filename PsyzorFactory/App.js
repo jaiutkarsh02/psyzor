@@ -26,7 +26,7 @@ export default class ReactNativeCommonScreens extends Component {
     
     return (
       
-      <ManageStream/>
+      <Recommendations/>
 
     );
     }

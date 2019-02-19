@@ -83,13 +83,25 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#ff6600'
+            backgroundColor: '#ff6600',
+            marginTop:30,
+            borderRadius:40
         },
         footer: {
             //marginTop: 35,
             borderColor:'#ff6600',
-            borderWidth:1,
+            borderBottomWidth:1,
             marginTop:0
+        },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+          
         }
         });
       return (
@@ -97,7 +109,9 @@ export default class Login extends Component {
    
           <ScrollView style={styles.scroll}>
           <Header>
-              <Label text="Manage Stream" />
+          <View>
+            <Text style={[styles.buttonText]}>ManageStream</Text> 
+            </View>
           </Header>
           <Label text="Broadcast Info" />
 <Container>

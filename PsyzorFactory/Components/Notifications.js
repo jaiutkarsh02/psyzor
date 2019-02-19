@@ -85,9 +85,22 @@ export default class Login extends Component {
         },
         footer: {
             alignSelf: 'flex-end',
-            marginLeft:80
+            marginLeft:80,
+            marginTop:600
             
-        }
+        },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+           
+          
+        },
+      
         });
       return (
        
@@ -95,15 +108,17 @@ export default class Login extends Component {
           <ScrollView style={styles.scroll}>
           <Header >
               <Container>
-                  <Label text="Notifications"/>
+              <View>
+            <Text style={[styles.buttonText]}>Notifications</Text> 
+            </View>
               </Container>
           </Header>
+          <View>
+            <Text style={[styles.footer]}>Notifications</Text> 
+            </View>
 
-<Footer >
-<Container>
-                  <Label text="Discover"/>
-                  <Label style={styles.footer} text="Browse"/>
-              </Container>
+<Footer>
+
 </Footer>
 
           </ScrollView>

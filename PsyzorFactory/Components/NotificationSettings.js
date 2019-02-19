@@ -66,7 +66,12 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
-            //alignSelf:'flex-start'
+            top:12,
+            fontWeight:"bold"
+        },
+        buttonWhiteText1: {
+            fontSize: 20,
+            color: '#FFF'
         },
         buttonBlackText: {
             fontSize: 20,
@@ -95,15 +100,28 @@ export default class Login extends Component {
           borderColor:"#ff6600",
             borderWidth:1,
             height:52
-        }
+        },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+           
+          
+        },
         });
       return (
        
    
           <ScrollView style={styles.scroll}>
           <Header>
-              <Container>
-                  <Label text="Notification Settings"/>
+              <Container flexDirection="row">
+              <View>
+            <Text style={[styles.buttonText]}>Notification Settings</Text> 
+            </View>
                   <Button 
             label="Done"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
@@ -121,7 +139,7 @@ export default class Login extends Component {
            
            label="Send me in-app notifications"
 
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>

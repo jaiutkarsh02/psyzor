@@ -67,13 +67,16 @@ export default class Login extends Component {
             fontSize: 20,
             color: '#FFF',
             marginTop:5,
+            top:9,
+            fontWeight:'bold'
            
         },
         buttonWhiteText1: {
             fontSize: 20,
             color: '#FFF',
             marginTop:5,
-            opacity:0.5
+            opacity:0.5,
+            
         },
         buttonBlackText: {
             fontSize: 20,
@@ -85,17 +88,28 @@ export default class Login extends Component {
             color: '#FF6600'
         },
         primaryButton: {
-            backgroundColor: '#FF6600',
+            backgroundColor:'#FF6600',
             right:0,
-            height:20,
             top:-50,
             alignSelf: 'flex-end',
-            marginRight:0
+            marginRight:0,
+            
         },
         primaryButton1: {
             backgroundColor: '#000',
             height:50,
             opacity:0.5
+        },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+           
+          
         },
         footer: {
            marginTop: 35,
@@ -109,8 +123,10 @@ export default class Login extends Component {
    
           <ScrollView style={styles.scroll}>
           <Header>
-              <Container>
-                  <Label text="My Subscription"/>
+              <Container flexDirection="row">
+              <View>
+            <Text style={[styles.buttonText]}>My Subscrpition</Text> 
+            </View>
                   <Button 
             label="Done"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 

@@ -67,7 +67,14 @@ export default class Login extends Component {
             fontSize: 20,
             color: '#FFF',
             alignSelf:'flex-start',
-            //opacity:0.5
+            top:12,
+            fontWeight:"bold"
+        },
+        buttonWhiteText1: {
+            fontSize: 20,
+            color: '#FFF',
+            alignSelf:'flex-start',
+           
         },
         buttonBlackText: {
             fontSize: 20,
@@ -92,6 +99,17 @@ export default class Login extends Component {
             height:50,
             opacity:0.5
         },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+           
+          
+        },
         footer: {
        
           borderColor:"#ff6600",
@@ -104,8 +122,10 @@ export default class Login extends Component {
    
           <ScrollView style={styles.scroll}>
           <Header>
-              <Container>
-                  <Label text="Presence"/>
+              <Container flexDirection="row">
+              <View>
+            <Text style={[styles.buttonText]}>Presence</Text> 
+            </View>
                   <Button 
             label="Done"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
@@ -116,7 +136,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Online"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>
@@ -124,7 +144,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Busy"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>
@@ -132,7 +152,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Invisible"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
             
     </Container>

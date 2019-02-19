@@ -152,7 +152,8 @@ export default class Login extends Component {
             backgroundColor: '#FF6600',
             marginLeft:30,
             marginRight:30,
-            marginTop:-40
+            marginTop:-40,
+            borderRadius:40
             
         },
         footer: {
