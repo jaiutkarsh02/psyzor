@@ -66,7 +66,15 @@ export default class Login extends Component {
         buttonWhiteText: {
             fontSize: 20,
             color: '#FFF',
+            
+            top:12,
+            fontWeight:"bold"
+        },
+        buttonWhiteText1: {
+            fontSize: 20,
+            color: '#FFF',
             alignSelf:'flex-start'
+           
         },
         buttonBlackText: {
             fontSize: 20,
@@ -79,22 +87,32 @@ export default class Login extends Component {
         },
         primaryButton: {
             backgroundColor: '#FF6600',
+            height:50,
             right:0,
             top:-45,
-            height:20,
             alignSelf: 'flex-end',
             marginRight:0
         },
         primaryButton1: {
-            backgroundColor: '#FF6600',
-            height:60,
-            opacity:0.1
+            backgroundColor: '#000',
+            opacity:0.5
         
+        },
+        buttonText:
+        {
+
+            marginLeft:10,
+            color:'#fff',
+            fontSize:20,
+            fontWeight:'bold',
+            top:10
+           
+          
         },
         footer: {
         marginRight:10,
         marginLeft:10,
-          borderColor:"white",
+          borderColor:"#ff6600",
             borderWidth:1,
             height:52
         }
@@ -104,8 +122,10 @@ export default class Login extends Component {
    
           <ScrollView style={styles.scroll}>
           <Header>
-              <Container>
-                  <Label text="Recommendations"/>
+              <Container flex-flexDirection="row">
+              <View>
+            <Text style={[styles.buttonText]}>Recoomendations</Text> 
+            </View>
                   <Button 
             label="Done"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
@@ -116,7 +136,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Categories"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>
@@ -124,7 +144,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Channels"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
     </Container>
 </View>
@@ -132,7 +152,7 @@ export default class Login extends Component {
     <Container>
         <Button 
             label="Videos"
-            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText}} 
+            styles={{button: styles.primaryButton1, label: styles.buttonWhiteText1}} 
             onPress={this.press.bind(this)} />
             
     </Container>

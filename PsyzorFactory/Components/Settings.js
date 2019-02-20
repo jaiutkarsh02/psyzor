@@ -115,7 +115,8 @@ export default class Login extends Component {
             marginTop:325,
               borderColor:"#ff6600",
                 borderWidth:1,
-                height:52
+                height:52,
+                borderRadius:30
             }
         });
       return (
