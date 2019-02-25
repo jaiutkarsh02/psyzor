@@ -25,8 +25,7 @@ export default class ReactNativeCommonScreens extends Component {
   
     
     return (
-      
-      <Social/>
+       <Login/>
 
     );
     }

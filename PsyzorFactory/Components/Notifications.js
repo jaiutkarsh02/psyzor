@@ -113,9 +113,7 @@ export default class Login extends Component {
             </View>
               </Container>
           </Header>
-          <View>
-            <Text style={[styles.footer]}>Notifications</Text> 
-            </View>
+          
 
 <Footer>
 

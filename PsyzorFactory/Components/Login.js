@@ -36,6 +36,7 @@ export default class Login extends Component {
             this.props.onLoginClick("login");
         
       }
+
     render() {
         const styles = StyleSheet.create({
             scroll: {
@@ -93,7 +94,7 @@ export default class Login extends Component {
             backgroundColor:'#000',
             opacity:0.5,
             borderColor:'#ff6600',
-            borderBottomWidth:1,marginLeft:30,
+            borderWidth:1,marginLeft:30,
             marginRight:30
             
         },
@@ -124,7 +125,8 @@ export default class Login extends Component {
             color: '#fff',
             fontSize:20,
             borderWidth:2,
-            borderColor:'#ff6600'
+            borderColor:'#ff6600',
+            marginLeft:0
         },
         buttonBlueText1: {
             color: '#fff',
@@ -134,8 +136,7 @@ export default class Login extends Component {
            
         },
         inline: {
-            flexDirection: 'row',
-            
+            flexDirection: 'row'
         },
         buttonWhiteText: {
          fontSize: 20,
@@ -164,21 +165,22 @@ export default class Login extends Component {
           <ScrollView style={styles.scroll}>
 
 <Container>
-<View>
-            <Text style={[styles.buttonOrangeText]}>Psyzor TV </Text> 
+<View><Text style={[styles.buttonOrangeText]}>Psyzor TV</Text> 
             </View>
        
 </Container>
-<Container>
+
+<Container >
+<Icon name="rocket" size={20} color="#900" />
     <TextInput
         style={styles.textInput}
         placeholder="UserName"
         placeholderTextColor="#fff"
       
         onChangeText={(value) => this.setState({username: value})}
-        value={this.state.username}
-    />
+        value={this.state.username}/>
 </Container>
+
 <Container>
     <TextInput
         secureTextEntry={true}
@@ -196,7 +198,7 @@ export default class Login extends Component {
         onPress={this.press.bind(this)} />
 </Container>
 
-<View flexDirection="row">
+{/* <View flexDirection="row">
     <Button 
         styles={{button: styles.transparentButton1
         
@@ -210,24 +212,14 @@ export default class Login extends Component {
         </View>
         
     </Button>
-    <Button 
-        styles={{button: styles.transparentButton1}}
-        onPress={this.press.bind(this)}
-    >
-        <View style={styles.inline}>
-            <Icon name="facebook-official" size={30} color="#3B5699" />
-            <Text style={[styles.buttonBlueText1]}> Facebook</Text> 
-            
-        </View>
-
-    </Button>
-    </View>
+   
+    </View> */}
 <View style={styles.footer}>
     <Container>
         <Button 
             label="Login"
             styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
-            onPress={this.press.bind(this)} />
+            onPress={this.press.bind(this)}/>
     </Container>
    
 </View>
