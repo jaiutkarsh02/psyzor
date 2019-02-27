@@ -54,6 +54,17 @@ export default class Login extends Component {
            fontSize: 20,
             textAlign:'right',
          },
+
+         userIcon:{
+             flexDirection:'row',
+             flex:1,
+             justifyContent:'space-between',
+             top:35,
+             marginLeft:35
+
+
+
+         },
         buttonOrangeText: {
            marginTop:70,
            marginBottom:40,
@@ -88,14 +99,17 @@ export default class Login extends Component {
           textInput: {
               
              
-           // height: 50,
+           height: 50,
             fontSize: 20,
             
             backgroundColor:'#000',
             opacity:0.5,
             borderColor:'#ff6600',
             borderWidth:1,marginLeft:30,
-            marginRight:30
+           marginRight:30,
+           paddingLeft:40
+           
+
             
         },
         textInput1:{
@@ -170,8 +184,8 @@ export default class Login extends Component {
        
 </Container>
 
-<Container >
-<Icon name="rocket" size={20} color="#900" />
+<Container style={styles.userIcon}>
+<Icon name="rocket" size={20} color="#900" style={styles.userIcon}/>
     <TextInput
         style={styles.textInput}
         placeholder="UserName"
